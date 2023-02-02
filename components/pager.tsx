@@ -19,7 +19,8 @@ export default function Pager({current,total}:any) {
                         const text=<a
                         className="page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none">
                             {v+1}</a>;
-                        return cur?text:<Link className="page-item" href={{ pathname: "/contact", query: { id: data.data.id, to: data.data.phone} }}>text</Link>;
+                        return cur?text:<Link className="page-item" href={{ pathname: "/contact", //query: { id: data.data.id, to: data.data.phone}
+                        }}>text</Link>;
                         })}
                     </ul>
                 </nav>

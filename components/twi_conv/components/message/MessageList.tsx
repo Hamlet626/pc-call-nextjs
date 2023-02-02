@@ -46,9 +46,6 @@ function getMessageTime(message: ReduxMessage) {
 
 const MessageList: React.FC<MessageListProps> = (props: MessageListProps) => {
   const { messages, conversation, lastReadIndex } = props;
-  if (messages === undefined) {
-    return <div className="empty" />;
-  }
 
   const theme = useTheme();
   const myRef = useRef<HTMLInputElement>(null);
@@ -95,6 +92,10 @@ const MessageList: React.FC<MessageListProps> = (props: MessageListProps) => {
         setShowHorizonIndex(showIndex);
       });
   }, [messages, lastReadIndex]);
+
+  if (messages === undefined) {
+    return <div className="empty" />;
+  }
 
   function setTopPadding(index: number) {
     if (

@@ -26,4 +26,6 @@ const Horizon: React.FC<HorizonProps> = React.forwardRef(
   }
 );
 
+Horizon.displayName = 'Horizon';
+
 export default Horizon;

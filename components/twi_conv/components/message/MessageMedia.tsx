@@ -54,7 +54,7 @@ const MessageMedia: React.FC<MessageMediaProps> = ({
             >
               {sending || !isMediaLoaded ? (
                 <Spinner
-                  size="60"
+                  size="sizeIcon60"
                   decorative={false}
                   color="colorTextInverse"
                   title="Loading"

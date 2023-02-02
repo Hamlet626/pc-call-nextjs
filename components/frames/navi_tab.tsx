@@ -26,7 +26,13 @@ export const WithNaviTabs=({children}:childrenArg)=>{
     );
 }
 
-const Tab=({current,text,link})=>{
+type TabArg={
+    current?:string,
+    text?:string,
+    link:string,
+}
+
+const Tab=({current,text,link}:TabArg)=>{
     const chosen=current===link;
     console.log(chosen);
 

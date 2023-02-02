@@ -17,7 +17,7 @@ export const TwiConv = ({ args }: TwiConvArgs) => {
     <Box style={styles.app}>
       <React.StrictMode>
         <Provider store={store}>
-          <Theme.Provider theme="default">
+          {/*<Theme.Provider theme="default">*/}
             <Box style={styles.app}>
               <link rel="preconnect" href="https://fonts.googleapis.com" />
               <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -29,7 +29,7 @@ export const TwiConv = ({ args }: TwiConvArgs) => {
                 <App />
               </MContext.Provider>
             </Box>
-          </Theme.Provider>
+          {/*</Theme.Provider>*/}
         </Provider>
       </React.StrictMode>
     </Box>

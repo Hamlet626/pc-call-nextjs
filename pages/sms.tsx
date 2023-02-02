@@ -19,7 +19,7 @@ const SmsPage=()=>{
 
     return <>
         <WithNaviTabs>
-            <TwiConv args={""}/>
+            {/*<TwiConv args={""}/>*/}
         </WithNaviTabs>
     </>;
 }
