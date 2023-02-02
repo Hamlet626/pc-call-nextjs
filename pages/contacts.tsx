@@ -6,7 +6,7 @@ import {getToken} from "../utils/utils";
 import {doc, getDoc} from "@firebase/firestore";
 import {db} from "../utils/provider";
 
-export const getStaticProps:GetStaticProps<{ data: any }> = async()=>{
+export const getStaticProps:GetStaticProps<{ data: Object }> = async()=>{
     let data=await getDoc(doc(db,`u/x6VqI5gYfWXvfu5siWqq5xVrhmz1`)).then((v)=>{
         let r=v.data()||{};r["id"]=v.id;
         return r;
@@ -19,7 +19,7 @@ const ContactsPage=({data}:InferGetStaticPropsType<typeof getStaticProps>)=>{
         <WithNaviTabs>
             <div className="flex flex-row relative mt-1 gap-x-4">
                 <div className="basis-3/5"><ContactsList/></div>
-                <div>`${data}`</div>
+                <div>`${data?.toString()}`</div>
                 {/*<div className="basis-2/5"><ContactDetail/></div>*/}
             </div>
         </WithNaviTabs>
